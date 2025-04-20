@@ -27,12 +27,12 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-card"> {/* Transparent, minimal card now */}
+    <div className="login-container ">
+      <div className="login-card ml-32"> {/* Transparent, minimal card now */}
         {/* Header Section */}
-        <div className="text-center space-y-1 mb-8">
-          <h1 className="text-2xl font-semibold tracking-tight text-white">Sign in to manage</h1>
-          <p className="text-sm text-white">Enter your details below:</p>
+        <div className=" space-y-1 mb-8">
+          <h1 className="text-3xl font-semibold tracking-tight text-white">Sign in to manage</h1>
+          <p className="text-s text-white">Enter your details below:</p>
         </div>
 
         {/* Form Section */}
@@ -43,17 +43,17 @@ export default function LoginPage() {
               control={form.control}
               name="email"
               render={({ field }) => (
-                <FormItem className="space-y-1.5">
-                  <Label htmlFor="email" className="login-label">Email Address</Label>
+                <FormItem className="space-y-2">
+                  <Label htmlFor="email" className="text-white text-sm">Email Address</Label>
                   <FormControl>
                     <Input
                       id="email"
                       placeholder="Enter your email"
-                      className="login-input"
+                      className="h-9 w-64 text-sm"
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage className="form-error" />
+                  <FormMessage className="text-red-500 text-xs" />
                 </FormItem>
               )}
             />
@@ -63,9 +63,9 @@ export default function LoginPage() {
               control={form.control}
               name="password"
               render={({ field }) => (
-                <FormItem className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <Label htmlFor="password" className="login-label">Password</Label>
+                <FormItem className="space-y-4">
+                  <div className="flex justify-between w-64">
+                    <Label htmlFor="password" className="text-white text-sm">Password</Label>
                     <Link 
                       href="#" 
                       className="text-xs font-medium text-white hover:underline"
@@ -78,11 +78,11 @@ export default function LoginPage() {
                       id="password"
                       type="password"
                       placeholder="Enter your password"
-                      className="login-input"
+                      className="h-9 w-64 text-sm"
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage className="form-error" />
+                  <FormMessage className="text-red-500 text-xs" />
                 </FormItem>
               )}
             />
@@ -90,11 +90,12 @@ export default function LoginPage() {
             {/* Submit Button */}
             <Button 
               type="submit" 
-              className="login-button"
+              className=" w-64 h-10 mt-2 text-sm"
               disabled={form.formState.isSubmitting}
             >
               Sign in
             </Button>
+
           </form>
         </Form>
       </div>
