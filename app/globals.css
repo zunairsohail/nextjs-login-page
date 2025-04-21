@@ -76,14 +76,14 @@
 }
 @layer components {
   .login-container {
-    @apply min-h-screen flex items-center justify-start p-7; /* changed justify-center → justify-start */
+    @apply min-h-screen flex items-center justify-center p-4 sm:justify-start sm:p-7;
     background-image: url('/images/background.jpg');
     background-size: cover;
     background-position: center;
   }
 
   .login-card {
-    @apply w-full max-w-md bg-transparent rounded-xl p-8 space-y-6 shadow-none; 
+    @apply w-full max-w-sm sm:max-w-md dark:bg-black/60 rounded-xl p-6 sm:p-8 space-y-6  ;
   }
 
   .form-error {
@@ -91,11 +91,11 @@
   }
 
   .login-button {
-    @apply w-full h-11 bg-black hover:bg-black/90 text-white;
+    @apply w-full h-11 bg-black hover:bg-black/90  text-white rounded-md;
   }
 
   .login-input {
-    @apply h-10 w-72 text-sm focus-visible:ring-primary; /* reduce height and width */
+    @apply h-10 w-full text-sm px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary;
   }
 
   .login-label {

@@ -63,7 +63,7 @@ export default function LoginPage() {
               control={form.control}
               name="password"
               render={({ field }) => (
-                <FormItem className="space-y-4">
+                <FormItem className="space-y-2">
                   <div className="flex justify-between w-64">
                     <Label htmlFor="password" className="text-white text-sm">Password</Label>
                     <Link 
